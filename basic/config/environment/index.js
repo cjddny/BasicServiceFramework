@@ -5,6 +5,7 @@ var _ = require('lodash');
 var sequeConfig = require('../config.json');
 
 var rootPath = path.normalize(__dirname + '/../..');
+
 //All configurations
 var all = {
 
@@ -19,6 +20,8 @@ var all = {
 
   //server ip
   ip: process.env.IP || '0.0.0.0'
-}
+};
 
-module.exports = _.merge(all, require('./' + process.env.NODE_ENV + '.js') || {});
+// module.exports = _.merge(all, require('./' + process.env.NODE_ENV + '.js') || {});
+
+module.exports = all;

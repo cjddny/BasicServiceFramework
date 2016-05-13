@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var config = require('./config/environment');
 var app = express();
 
 // view engine setup
@@ -61,8 +61,8 @@ app.use(function(err, req, res, next) {
 var server = require('http').createServer(app);
 
 // Start server
-server.listen('3009', '127.0.0.1', function() {
-  console.log('Express server listening on %d, in %s mode', 3009,
+server.listen(config.port, config.ip, function() {
+  console.log('Express server listening on %d, in %s mode', config.port,
     app.get('env'));
 });
 
