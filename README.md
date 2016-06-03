@@ -11,7 +11,7 @@ linux,macOS
 若无安装则可以先下载linux环境有名的包管理工具`HomeBrew`(http://brew.sh/)。
 
 
-安装完HomeBrew`
+安装完`HomeBrew`
 则分别执行
 
 ```
@@ -21,6 +21,7 @@ Brew install redis
 Brew install mysql
 ```
 
+####启动服务
 接着我们要开启这些数据库服务
 
 
@@ -41,7 +42,8 @@ sudo mysql.server start
 sudo mongod
 ```
 
-####启动
+####服务器运行
+
 我们在本机运行环境使用了nodemon作为node进程管理(自动重启)(http://nodemon.codeplex.com/),
 express(http://www.expressjs.com.cn/)作为web框架
 
