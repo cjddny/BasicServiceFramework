@@ -19,9 +19,20 @@ var all = {
   port: process.env.PORT || 3008,
 
   //server ip
-  ip: process.env.IP || '0.0.0.0'
+  ip: process.env.IP || '0.0.0.0',
+
+  //MongoDB connetcion OPTIONS
+  mongo: {
+    options: {
+      db: {
+        safe: true
+      }
+    }
+  }
 };
 
 // module.exports = _.merge(all, require('./' + process.env.NODE_ENV + '.js') || {});
 
-module.exports = all;
+module.exports = _.merge(all, require('./' + 'development' + '.js') || {});
+
+// module.exports = all;
