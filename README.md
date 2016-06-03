@@ -1,5 +1,6 @@
 # BasicServiceFramework
-基于nodejs，mongodb，mysql的基础框架
+*基于nodejs，mongodb，mysql的基础框架*
+
 
 ####运行环境
 linux,macOS
