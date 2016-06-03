@@ -1,11 +1,12 @@
 'use strict';
 
 var svc = require('./../../services/');
+var OperationResult = require('../../components/utils/result');
 
 exports.register = function(req, res) {
   svc.user.register(req.body).then(function(result) {
-    res.json(result.toJson());
+    res.json(new OperationResult(null, result).toJson());
   }).catch(function(err) {
-    res.json(err.toJson());
+    res.json(new OperationResult(err).toJson());
   });
 }
