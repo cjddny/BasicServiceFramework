@@ -16,7 +16,6 @@ function register(dto) {
       function(err, user) {
         console.info('user-----', user);
         console.info('err-----', err);
-
         if (!!err) reject(new Error('新建用户出错'));
         resolve(user);
       });
