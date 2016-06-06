@@ -27,7 +27,7 @@ Brew install mysql
 
 启动redis
 ```
-sudo redis-server /usr/local/etc/redis.confBrew install redis
+sudo redis-server /usr/local/etc/redis.conf
 ```
 
 
